@@ -1,0 +1,17 @@
+*,
+*::after,
+*::before {
+    margin:0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    box-sizing: inherit;  /* inherit the box-sizing defined by the body element into all elements */
+}
+
+html {
+    /* font-size: 10px;  don't spceify a fixed font size in other to give the user the ability to determine the font-size he wants the site to be displayed in*/
+    font-size: 62.5%;  /*convert the default browser font size of 16px to percentage */
+}
+
+body {
+    box-sizing: border-box;
+}

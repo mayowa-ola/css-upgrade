@@ -6,76 +6,6 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  /* box-sizing: border-box; */
-  box-sizing: inherit;
-  /* inherit the box-sizing defined by the body element into all elements */ }
-
-html {
-  /* font-size: 10px;  don't spceify a fixed font size in other to give the user the ability to determine the font-size he wants the site to be displayed in*/
-  font-size: 62.5%;
-  /*convert the default browser font size of 16px to percentage */ }
-
-body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  /* font-size: 16px; */
-  line-height: 1.7;
-  padding: 3rem;
-  color: #777;
-  box-sizing: border-box; }
-
-.header {
-  background-image: linear-gradient(to right, #55c57a, #28b485), url(../img/hero.jpg);
-  background-size: cover;
-  height: 95vh;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  position: relative; }
-
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem; }
-
-.header__logo {
-  height: 3.5rem; }
-
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center; }
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  backface-visibility: hidden;
-  margin-bottom: 6rem; }
-
-.heading-primary--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  animation-name: moveInLeft;
-  animation-duration: 2s;
-  /* animation-delay: 3s;
-    animation-iteration-count: 3; */
-  animation-timing-function: ease-out; }
-
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.75rem;
-  animation: moveInRight 1s ease-out; }
-
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -96,8 +26,62 @@ body {
     opacity: 1;
     transform: translate(0); } }
 
-.btn:link,
-.btn:visited {
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+  box-sizing: inherit;
+  /* inherit the box-sizing defined by the body element into all elements */ }
+
+html {
+  /* font-size: 10px;  don't spceify a fixed font size in other to give the user the ability to determine the font-size he wants the site to be displayed in*/
+  font-size: 62.5%;
+  /*convert the default browser font size of 16px to percentage */ }
+
+body {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  padding: 3rem;
+  color: #777; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    /* animation-delay: 3s;
+        animation-iteration-count: 3; */
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 1s ease-out; }
+
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -138,14 +122,26 @@ body {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0; }
 
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(3rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
 .btn--animated {
   animation: moveInBottom .5s ease-out .75;
   animation-fill-mode: backwards; }
+
+.header {
+  background-image: linear-gradient(to right, #55c57a, #28b485), url(../img/hero.jpg);
+  background-size: cover;
+  height: 95vh;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
