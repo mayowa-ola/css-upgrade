@@ -22,10 +22,15 @@
     }
 
     &--white {
-        background-color: #fff;
+        background-color: $color-white;
         color: #777;
     }
 
+    &--green {
+        background-color: $color-green;
+        color: $color-white;
+    }
+ 
     &::after {
         content:"";
         display: inline-block;

@@ -29,6 +29,16 @@
                 background-image: linear-gradient(to right bottom,
                     $color-orange-light, $color-orange) ;
             }
+
+            &-2 {
+                background-image: linear-gradient(to right bottom,
+                    $color-light-green, $color-green) ;
+            }
+
+            &-3 {
+                background-image: linear-gradient(to right bottom,
+                    $color-blue-light, $color-blue) ;
+            }
         }
     }
     
@@ -48,6 +58,7 @@
         background-blend-mode: screen; //belnds the two background together
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        border-top-left-radius: 2px;
 
         &--1 {
             background-image:  linear-gradient(to right bottom,
@@ -55,10 +66,12 @@
         }
 
         &--2 {
-            background-image: url(../img/nat-5.jpg);
+            background-image:  linear-gradient(to right bottom,
+            $color-light-green, $color-green) ,url(../img/nat-6.jpg);
         }
         &--3 {
-            background-image: url(../img/nat-5.jpg);
+            background-image:  linear-gradient(to right bottom,
+            $color-blue-light, $color-blue) ,url(../img/nat-7.jpg);
         }
     }
 
@@ -84,6 +97,18 @@
                                 rgba($color-orange-light, .85),
                                 rgba($color-orange, .85));
         }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom, 
+                                rgba($color-light-green, .85),
+                                rgba($color-green, .85));
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right bottom, 
+                                rgba($color-blue-light, .85),
+                                rgba($color-blue, .85));
+        }
     }
 
     &__details {
@@ -103,5 +128,32 @@
                 }
             }
         }
+    }
+
+    //BACK SIDE STYLING
+
+    &__cta {
+        position:absolute;
+        top: 10%;
+        left: 50%;
+        transform:translate(-50%, 50%);
+        width: 90%;   
+        text-align: center;
+
+    }
+
+    &__price-box {
+        color: $color-white;
+        margin-bottom: 8rem;
+    }
+
+    &__price-only {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+
+    &__price-value {
+        font-size: 6rem;
+        font-weight: 100;
     }
 }
