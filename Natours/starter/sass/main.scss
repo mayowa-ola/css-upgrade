@@ -1,8 +1,8 @@
 @import  "abstracts/functions";
 @import  "abstracts/mixins";
 @import  "abstracts/variables";       
-             
-@import  "base/animations";
+                   
+@import  "base/animations";     
 @import  "base/base";
 @import  "base/typography";
 @import  "base/utilities";
@@ -14,6 +14,7 @@
 @import  "components/feature-box";
 @import  "components/form";
 @import  "components/story";
+@import  "components/popup";
      
 @import  "layout/header";
 @import  "layout/grid";
